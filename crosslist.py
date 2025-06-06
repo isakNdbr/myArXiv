@@ -24,6 +24,15 @@ buzzwords = {
     "machine learning", "neural network", "bayesian model",
 }
 
+exclude_keywords = {
+    "exoplanet", "exoplanets", "planet", "planetary", 
+    "agn", "active galactic nuclei", "active galactic nucleus",
+    "gravitational wave", "gravitational waves", "ligo", "virgo",
+    "black hole", "neutron star", "pulsar",
+    "cosmology", "dark matter", "dark energy",
+    "galaxy formation", "galaxy evolution"
+}
+
 ######## ---------------------------------- ########
 ####################################################
 
@@ -51,7 +60,7 @@ search_query = 'cat:%s+AND+lastUpdatedDate:[%s+TO+%s]' % (base_cat,
                               start_date,
                               end_date)
 start = 0                    
-max_results = 10_000
+max_results = 5_000
 
 query = 'search_query=%s&start=%i&max_results=%i' % (search_query,
                                                      start,
@@ -273,6 +282,11 @@ for entry in feed.entries:
         continue
     arxiv_id = entry.id.split('/abs/')[-1]
     if arxiv_id[-2:] != 'v1':
+        continue
+
+    # Filter out papers with excluded keywords in title or abstract
+    title_abstract = (entry.title + " " + entry.summary).lower()
+    if any(keyword.lower() in title_abstract for keyword in exclude_keywords):
         continue
     
     paper_count += 1
