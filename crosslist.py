@@ -16,12 +16,15 @@ cross_cats = {"cs.LG", # Machine Learning
               }
 # buzzwords for the abstract filtering
 buzzwords = {
-    "star formation",
+    "star formation", 
+    "ScoCen", "Local Bubble", "Radcliffe Wave", 
     "stellar association", "stellar cluster", "open cluster",
+    "tracebacks", "ISM", 
     "dust mapping", "dust extinction", "molecular cloud",
     
     # DS and Methods
-    "machine learning", "neural network", "bayesian model",
+    #"machine learning", "neural network", 
+    "HDBSCAN", "bayesian model", "gaussian mixture model", "information field theory",
 }
 
 exclude_keywords = {
@@ -30,7 +33,8 @@ exclude_keywords = {
     "gravitational wave", "gravitational waves", "ligo", "virgo",
     "black hole", "neutron star", "pulsar",
     "cosmology", "dark matter", "dark energy",
-    "galaxy formation", "galaxy evolution"
+    "galaxy formation", "galaxy evolution", 'cosmic reionization', 'galaxy merger',
+    "astroseismology",
 }
 
 ######## ---------------------------------- ########
@@ -60,7 +64,7 @@ search_query = 'cat:%s+AND+lastUpdatedDate:[%s+TO+%s]' % (base_cat,
                               start_date,
                               end_date)
 start = 0                    
-max_results = 5_000
+max_results = 10_000
 
 query = 'search_query=%s&start=%i&max_results=%i' % (search_query,
                                                      start,
