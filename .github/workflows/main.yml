@@ -58,8 +58,8 @@ jobs:
         cp -r index.html gh-pages/
         cd gh-pages
         touch .nojekyll
-        git config --local user.email 163846124+isakNdbr@users.noreply.github.com
-        git config --local user.name Isak
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
         git add .
         git commit -m "Update documentation" -a || true
         # The above command will fail if no changes were present, so we ignore
