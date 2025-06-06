@@ -255,7 +255,7 @@ html_content = f"""
 <body>
     <div class="container">
         <div class="header">
-            <h1>arXiv Paper Feed</h1>
+            <h1> Superb arXiv Selection 🐻 </h1>
             <div class="subtitle">Cross-listed {base_cat} submissions</div>
             <div class="subtitle">Feed last updated: {feed.feed.updated}</div>
         </div>
