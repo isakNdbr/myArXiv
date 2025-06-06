@@ -14,13 +14,14 @@ cross_cats = {"cs.LG", # Machine Learning
               "astro-ph.SR"
               #"physics.data-an" # Data Analysis in Physics
               }
+
 # buzzwords for the abstract filtering
 buzzwords = {
     "star formation", 
     "ScoCen", "Local Bubble", "Radcliffe Wave", 
-    "stellar association", "stellar cluster", "open cluster",
-    "tracebacks", "ISM", 
-    "dust mapping", "dust extinction", "molecular cloud",
+    "stellar association", "stellar cluster", "open cluster", "stellar families", "moving group",
+    "tracebacks", "ISM", "dynamical ages", "kinematic ages", 
+    "dust mapping", "dust extinction", "molecular cloud", "dust lane", "differential extinction",
     
     # DS and Methods
     #"machine learning", "neural network", 
@@ -30,11 +31,12 @@ buzzwords = {
 exclude_keywords = {
     "exoplanet", "exoplanets", "planet", "planetary", 
     "agn", "active galactic nuclei", "active galactic nucleus",
-    "gravitational wave", "gravitational waves", "ligo", "virgo",
-    "black hole", "neutron star", "pulsar",
+    "gravitational wave", "gravitational waves", "ligo", "virgo", "neutron star", "pulsar",
     "cosmology", "dark matter", "dark energy",
     "galaxy formation", "galaxy evolution", 'cosmic reionization', 'galaxy merger',
-    "astroseismology",
+    "astroseismology", "quasar", "quasars", "cosmic microwave background", "cmb", 
+    "cosmnic rays", "cosmic ray", "gamma-ray burst", "gamma-ray bursts",
+    "cosmic reionization",
 }
 
 ######## ---------------------------------- ########
